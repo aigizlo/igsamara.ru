@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InvestGroup Samara - Недвижимость для жизни, бизнеса и инвестиций</title>
+    <meta name="description" content="Помогаем купить, продать и арендовать коммерческие и жилые объекты, загородные дома и земельные участки в Самаре и области. Опыт более 10 лет.">
+    <meta name="keywords" content="недвижимость самара, купить квартиру самара, продать недвижимость, коммерческая недвижимость, офисы самара, земельные участки, загородные дома, investgroup">
+    
+    <!-- Open Graph метаданные для социальных сетей -->
+    <meta property="og:title" content="InvestGroup Samara - Недвижимость в Самаре">
+    <meta property="og:description" content="Помогаем купить, продать и арендовать недвижимость в Самаре и области. Опыт более 10 лет. Юридическая чистота сделок.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://investgroupsamara.ru">
+    <meta property="og:image" content="https://investgroupsamara.ru/images/og-image.jpg">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="InvestGroup Samara - Недвижимость в Самаре">
+    <meta name="twitter:description" content="Помогаем купить, продать и арендовать недвижимость в Самаре и области. Опыт более 10 лет.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="logo/лого1.svg">
+    <link rel="icon" type="image/png" href="logo/лого1.png">
+    
+    <!-- Подключение шрифтов -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Подключение библиотек и стилей -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Schema.org разметка для местного бизнеса -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "InvestGroup Samara",
+        "description": "Компания по недвижимости в Самаре. Помогаем купить, продать и арендовать коммерческие и жилые объекты.",
+        "url": "https://investgroupsamara.ru",
+        "telephone": "+7-937-999-91-36",
+        "email": "investgroupsamara@mail.ru",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ул. Скляренко, 26",
+            "addressLocality": "Самара",
+            "addressCountry": "RU"
+        },
+        "openingHours": "Mo-Fr 09:00-18:00",
+        "areaServed": {
+            "@type": "Place",
+            "name": "Самара и Самарская область"
+        },
+        "serviceArea": {
+            "@type": "GeoCircle",
+            "geoMidpoint": {
+                "@type": "GeoCoordinates",
+                "latitude": 53.2415,
+                "longitude": 50.2212
+            },
+            "geoRadius": "100000"
+        },
+        "services": [
+            "Продажа недвижимости",
+            "Покупка недвижимости",
+            "Аренда недвижимости",
+            "Консультации по недвижимости",
+            "Юридическое сопровождение сделок"
+        ]
+    }
+    </script>
+</head>
+<body>
+    <!-- Шапка с навигацией -->
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <div class="header__logo">
+                    <img src="logo/лого1.svg" alt="InvestGroup Samara" class="header__logo-img">
+                </div>
+                <nav class="header__nav">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#about" class="nav__link">О компании</a></li>
+                        <li class="nav__item"><a href="#benefits" class="nav__link">Преимущества</a></li>
+                        <li class="nav__item"><a href="#cases" class="nav__link">Кейсы</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link">Контакты</a></li>
+                    </ul>
+                </nav>
+                <button class="header__burger" aria-label="Меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero-блок -->
+        <section class="hero">
+            <div class="hero__bg">
+                <div class="hero__bg-left">
+                    <img src="images/sean-pollock-PhYq704ffdA-unsplash.jpg" alt="Современный бизнес-центр" class="hero__bg-img">
+                </div>
+                <div class="hero__bg-right">
+                    <img src="images/avi-werde-hHz4yrvxwlA-unsplash.jpg" alt="Современная квартира" class="hero__bg-img">
+                </div>
+            </div>
+            <div class="hero__overlay"></div>
+            <div class="container">
+                <div class="hero__content" data-aos="fade-up">
+                    <h1 class="hero__title">Недвижимость для жизни, бизнеса и инвестиций</h1>
+                    <p class="hero__subtitle">Помогаем купить, продать и арендовать коммерческие и жилые объекты, загородные дома и земельные участки в Самаре и области. Сопровождаем сделку от запроса до ключей.</p>
+                    <div class="hero__actions">
+                        <a href="#cta" class="btn btn--primary">Оставить заявку</a>
+                        <a href="#cta" class="btn btn--secondary">Подобрать объект</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Блок о компании -->
+        <section class="about" id="about">
+            <div class="container">
+                <div class="about__content" data-aos="fade-up">
+                    <h2 class="about__title">Работаем для вас более 10 лет</h2>
+                    <div class="about__stats">
+                        <div class="stat">
+                            <div class="stat__number">10+</div>
+                            <div class="stat__label">лет на рынке</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat__number">1200+</div>
+                            <div class="stat__label">объектов</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat__number">95%</div>
+                            <div class="stat__label">клиентов рекомендуют</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Почему с нами удобно -->
+        <section class="benefits" id="benefits">
+            <div class="container">
+                <h2 class="benefits__title" data-aos="fade-up">Почему с нами удобно</h2>
+                <div class="benefits__grid">
+                    <div class="benefit" data-aos="fade-up" data-aos-delay="100">
+                        <div class="benefit__icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2"/>
+                                <path d="M12 20l6 6L28 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="benefit__title">Один контакт — весь путь</h3>
+                        <p class="benefit__text">От первого звонка до передачи ключей</p>
+                    </div>
+                    <div class="benefit" data-aos="fade-up" data-aos-delay="200">
+                        <div class="benefit__icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                <rect x="6" y="10" width="28" height="20" rx="2" stroke="currentColor" stroke-width="2"/>
+                                <path d="M6 18h28M14 26h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="benefit__title">Прозрачные условия</h3>
+                        <p class="benefit__text">Стоимость и шаги понятны заранее</p>
+                    </div>
+                    <div class="benefit" data-aos="fade-up" data-aos-delay="300">
+                        <div class="benefit__icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                <circle cx="20" cy="20" r="8" stroke="currentColor" stroke-width="2"/>
+                                <path d="M20 12V8M20 32v-4M28 20h4M8 20H4M26.83 13.17l2.83-2.83M10.34 29.66l2.83-2.83M26.83 26.83l2.83 2.83M10.34 10.34l2.83 2.83" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="benefit__title">Локальная экспертиза</h3>
+                        <p class="benefit__text">Знаем спрос по районам Самары и области</p>
+                    </div>
+                    <div class="benefit" data-aos="fade-up" data-aos-delay="400">
+                        <div class="benefit__icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                <rect x="8" y="6" width="24" height="28" rx="2" stroke="currentColor" stroke-width="2"/>
+                                <path d="M16 2v8M24 2v8M8 14h24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="benefit__title">Юридическая чистота</h3>
+                        <p class="benefit__text">Проверяем документы и риски до сделки</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Целевые аудитории -->
+        <section class="audiences">
+            <div class="container">
+                <div class="audiences__grid">
+                    <div class="audience audience--business" data-aos="fade-up">
+                        <h3 class="audience__title">Бизнесу</h3>
+                        <p class="audience__text">Цифры и сроки</p>
+                    </div>
+                    <div class="audience audience--families" data-aos="fade-up" data-aos-delay="100">
+                        <h3 class="audience__title">Семьям</h3>
+                        <p class="audience__text">Комфорт и локация</p>
+                    </div>
+                    <div class="audience audience--investors" data-aos="fade-up" data-aos-delay="200">
+                        <h3 class="audience__title">Инвесторам</h3>
+                        <p class="audience__text">Доходность</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Кейсы -->
+        <section class="cases" id="cases">
+            <div class="container">
+                <h2 class="cases__title" data-aos="fade-up">Наши кейсы</h2>
+                <div class="cases__grid">
+                    <div class="case" data-aos="fade-up" data-aos-delay="100">
+                        <div class="case__image">
+                            <img src="images/jason-dent-w3eFhqXjkZE-unsplash.jpg" alt="Инвестиционный проект" class="case__img">
+                        </div>
+                        <div class="case__content">
+                            <h3 class="case__title">Инвестиционный проект</h3>
+                            <p class="case__description">Помогли инвестору найти доходную коммерческую недвижимость с рентабельностью 12% годовых. Срок поиска — 2 недели.</p>
+                            <div class="case__details">
+                                <span class="case__metric">12% годовых</span>
+                                <span class="case__metric">2 недели</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case" data-aos="fade-up" data-aos-delay="200">
+                        <div class="case__image">
+                            <img src="images/quan-tran-BbPrbSZYQ_E-unsplash.jpg" alt="Продажа квартиры" class="case__img">
+                        </div>
+                        <div class="case__content">
+                            <h3 class="case__title">Продажа квартиры</h3>
+                            <p class="case__description">Продали 3-комнатную квартиру в центре за максимальную рыночную цену. Решили вопросы с документами.</p>
+                            <div class="case__details">
+                                <span class="case__metric">Максимальная цена</span>
+                                <span class="case__metric">1 месяц</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case" data-aos="fade-up" data-aos-delay="300">
+                        <div class="case__image">
+                            <img src="images/patrick-tomasso-gMes5dNykus-unsplash.jpg" alt="Продажа дома" class="case__img">
+                        </div>
+                        <div class="case__content">
+                            <h3 class="case__title">Продажа загородного дома</h3>
+                            <p class="case__description">Нашли покупателя для дома с участком 15 соток. Организовали безопасные расчеты через банковскую ячейку.</p>
+                            <div class="case__details">
+                                <span class="case__metric">15 соток</span>
+                                <span class="case__metric">3 недели</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case" data-aos="fade-up" data-aos-delay="400">
+                        <div class="case__image">
+                            <img src="images/joel-filipe-RFDP7_80v5A-unsplash.jpg" alt="Продажа помещения" class="case__img">
+                        </div>
+                        <div class="case__content">
+                            <h3 class="case__title">Продажа торгового помещения</h3>
+                            <p class="case__description">Реализовали помещение в центре города с высокой проходимостью. Учли специфику бизнеса покупателя.</p>
+                            <div class="case__details">
+                                <span class="case__metric">Центр города</span>
+                                <span class="case__metric">10 дней</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Как мы работаем -->
+        <section class="process">
+            <div class="container">
+                <h2 class="process__title" data-aos="fade-up">Как мы работаем</h2>
+                <div class="process__steps">
+                    <div class="step" data-aos="fade-up" data-aos-delay="100">
+                        <div class="step__number">1</div>
+                        <div class="step__content">
+                            <h3 class="step__title">Обсуждаем цель и задачи</h3>
+                        </div>
+                    </div>
+                    <div class="step" data-aos="fade-up" data-aos-delay="200">
+                        <div class="step__number">2</div>
+                        <div class="step__content">
+                            <h3 class="step__title">Предлагаем варианты и стратегию</h3>
+                        </div>
+                    </div>
+                    <div class="step" data-aos="fade-up" data-aos-delay="300">
+                        <div class="step__number">3</div>
+                        <div class="step__content">
+                            <h3 class="step__title">Организуем просмотры/переговоры</h3>
+                        </div>
+                    </div>
+                    <div class="step" data-aos="fade-up" data-aos-delay="400">
+                        <div class="step__number">4</div>
+                        <div class="step__content">
+                            <h3 class="step__title">Проверяем документы</h3>
+                        </div>
+                    </div>
+                    <div class="step" data-aos="fade-up" data-aos-delay="500">
+                        <div class="step__number">5</div>
+                        <div class="step__content">
+                            <h3 class="step__title">Закрываем сделку и передаём объект</h3>
+                        </div>
+                    </div>
+                </div>
+                <p class="process__note" data-aos="fade-up">Сроки зависят от сегмента и готовности объекта; предложим реалистичный план до старта.</p>
+            </div>
+        </section>
+
+        <!-- CTA с формой -->
+        <section class="cta" id="cta">
+            <div class="container">
+                <div class="cta__content" data-aos="fade-up">
+                    <h2 class="cta__title">Нужен офис / склад / магазин?</h2>
+                    <p class="cta__subtitle">Оставьте заявку, мы предложим варианты за 24 часа</p>
+                    <form class="cta__form" id="contactForm">
+                        <div class="form__group">
+                            <input type="text" class="form__input" placeholder="Ваше имя" required>
+                        </div>
+                        <div class="form__group">
+                            <input type="tel" class="form__input" placeholder="Телефон" required>
+                        </div>
+                        <div class="form__group">
+                            <textarea class="form__input form__input--textarea" placeholder="Опишите ваши потребности" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn--primary btn--full">Получить предложения</button>
+                        <p class="form__privacy">Нажимая кнопку, вы соглашаетесь с <a href="#" class="form__privacy-link">политикой конфиденциальности</a></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="faq">
+            <div class="container">
+                <h2 class="faq__title" data-aos="fade-up">Часто задаваемые вопросы</h2>
+                <div class="faq__list">
+                    <details class="faq__item" data-aos="fade-up" data-aos-delay="100">
+                        <summary class="faq__question">Работаете с нестандартными запросами?</summary>
+                        <div class="faq__answer">
+                            <p>Да. Подберём под конкретную локацию, параметры, трафик, мощности и бюджеты.</p>
+                        </div>
+                    </details>
+                    <details class="faq__item" data-aos="fade-up" data-aos-delay="200">
+                        <summary class="faq__question">Сколько занимает подбор?</summary>
+                        <div class="faq__answer">
+                            <p>Коммерция — от 1–3 недель; жильё/загород — от нескольких дней. Срок зависит от рынка и требований.</p>
+                        </div>
+                    </details>
+                    <details class="faq__item" data-aos="fade-up" data-aos-delay="300">
+                        <summary class="faq__question">Вы проверяете документы?</summary>
+                        <div class="faq__answer">
+                            <p>Да, делаем юридическую проверку и помогаем организовать безопасные расчёты.</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Футер -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__info">
+                    <div class="footer__contacts">
+                        <a href="tel:+79379999136" class="footer__contact">8(937)999-91-36</a>
+                        <a href="mailto:investgroupsamara@mail.ru" class="footer__contact">investgroupsamara@mail.ru</a>
+                    </div>
+                    <div class="footer__address">
+                        <p>г.Самара, ул.Скляренко, 26</p>
+                        <p>Часы работы: 9:00-18:00</p>
+                    </div>
+                </div>
+                <div class="footer__links">
+                    <a href="#" class="footer__link">Политика конфиденциальности</a>
+                    <a href="#" class="footer__link">Согласие на обработку ПДн</a>
+                    <a href="#" class="footer__link">Реквизиты</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
