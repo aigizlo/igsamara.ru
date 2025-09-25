@@ -297,60 +297,6 @@ function initScrollHeader() {
 }
 
 // ================================================================
-// Дополнительные стили для мобильного меню (добавляются динамически)
+// Все стили для мобильного меню теперь в CSS файле
+// Дополнительная инициализация не требуется
 // ================================================================
-function addMobileMenuStyles() {
-    const style = document.createElement('style');
-    style.textContent = `
-        @media (max-width: 768px) {
-            .header__nav {
-                position: fixed;
-                top: 70px;
-                left: -100%;
-                width: 100%;
-                height: calc(100vh - 70px);
-                background: rgba(255, 255, 255, 0.98);
-                backdrop-filter: blur(10px);
-                transition: left 0.3s ease;
-                z-index: 999;
-                padding-top: 2rem;
-            }
-            
-            .header__nav.active {
-                left: 0;
-            }
-            
-            .nav__list {
-                flex-direction: column;
-                align-items: center;
-                gap: 2rem;
-            }
-            
-            .nav__link {
-                font-size: 1.2rem;
-                padding: 1rem 0;
-            }
-            
-            .header__burger.active span:nth-child(1) {
-                transform: rotate(45deg) translate(5px, 5px);
-            }
-            
-            .header__burger.active span:nth-child(2) {
-                opacity: 0;
-            }
-            
-            .header__burger.active span:nth-child(3) {
-                transform: rotate(-45deg) translate(7px, -6px);
-            }
-            
-            .header.scrolled {
-                background: rgba(255, 255, 255, 0.98);
-                box-shadow: 0 2px 20px rgba(20, 93, 87, 0.1);
-            }
-        }
-    `;
-    document.head.appendChild(style);
-}
-
-// Добавляем стили для мобильного меню
-addMobileMenuStyles();
