@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initAOS();
     initContactForm();
     initScrollHeader();
+    initScrollIndicator();
 });
 
 // ================================================================
@@ -45,6 +46,23 @@ function initSmoothScrolling() {
                     document.body.style.overflow = '';
                 }
             }
+        });
+    });
+}
+
+// ================================================================
+// Индикатор прокрутки на вступительном экране
+// ================================================================
+function initScrollIndicator() {
+    const scrollIndicator = document.querySelector('.intro__scroll-indicator');
+    const heroSection = document.querySelector('.hero');
+    
+    if (!scrollIndicator || !heroSection) return;
+    
+    scrollIndicator.addEventListener('click', function() {
+        heroSection.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
         });
     });
 }

@@ -14,7 +14,7 @@
     /* Дополнительные цвета */
     --color-white: #ffffff;
     --color-black: #000000;
-    --color-gray-light: e0e0e0;
+    --color-gray-light: #e0e0e0;
     --color-gray: #6c757d;
     --color-gray-dark: #343a40;
     --color-site-bg: #e0e0e0;
@@ -131,6 +131,7 @@ input, textarea {
     background: transparent;
     color: var(--color-white);
     border-color: var(--color-white);
+    margin-left: 20px;
 }
 
 .btn--secondary:hover {
@@ -221,6 +222,154 @@ input, textarea {
     height: 2px;
     background: var(--color-primary);
     transition: var(--transition);
+}
+
+/* =================================================================
+   Вступительный блок с логотипом
+   ================================================================= */
+.intro {
+    background: var(--color-gray-light);
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    overflow: hidden;
+}
+
+.intro__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+}
+
+.intro__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: logoFadeIn 1.5s ease-out;
+}
+
+.intro__logo-img {
+    max-width: min(70vw, 800px);
+    max-height: min(70vh, 800px);
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 20px rgba(20, 93, 87, 0.2));
+}
+
+@keyframes logoFadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8) translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.intro__scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: var(--color-primary);
+    animation: scrollBounce 2s infinite;
+    cursor: pointer;
+}
+
+.scroll-arrow {
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.scroll-text {
+    font-size: 14px;
+    font-weight: var(--font-weight-medium);
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.intro__scroll-indicator:hover .scroll-arrow,
+.intro__scroll-indicator:hover .scroll-text {
+    opacity: 1;
+}
+
+@keyframes scrollBounce {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    50% {
+        transform: translateX(-50%) translateY(10px);
+    }
+}
+
+/* Адаптивность для больших экранов */
+@media (min-width: 1400px) {
+    .intro__logo-img {
+        max-width: min(75vw, 1000px);
+        max-height: min(75vh, 1000px);
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+    .intro__logo-img {
+        max-width: min(70vw, 900px);
+        max-height: min(70vh, 900px);
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .intro__logo-img {
+        max-width: min(65vw, 700px);
+        max-height: min(65vh, 700px);
+    }
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .intro__container {
+        padding: 30px;
+    }
+    
+    .intro__logo-img {
+        max-width: min(80vw, 500px);
+        max-height: min(70vh, 500px);
+    }
+}
+
+@media (max-width: 480px) {
+    .intro__container {
+        padding: 20px;
+    }
+    
+    .intro__logo-img {
+        max-width: min(85vw, 400px);
+        max-height: min(65vh, 400px);
+    }
+}
+
+/* Очень маленькие экраны */
+@media (max-width: 320px) {
+    .intro__container {
+        padding: 15px;
+    }
+    
+    .intro__logo-img {
+        max-width: min(90vw, 300px);
+        max-height: min(60vh, 300px);
+    }
 }
 
 /* =================================================================
