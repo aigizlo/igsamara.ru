@@ -26,9 +26,10 @@ function initSmoothScrolling() {
             const targetElement = document.querySelector(targetId);
             
             if (targetElement) {
-                // Учитываем высоту фиксированной шапки
-                const headerHeight = document.querySelector('.header').offsetHeight;
-                const targetPosition = targetElement.offsetTop - headerHeight;
+                // Учитываем высоту шапки только если она видима
+                const header = document.querySelector('.header');
+                const headerHeight = header.classList.contains('visible') ? header.offsetHeight : 0;
+                const targetPosition = targetElement.offsetTop - headerHeight - 20; // +20px для отступа
                 
                 window.scrollTo({
                     top: targetPosition,
@@ -275,24 +276,34 @@ function resetForm() {
 }
 
 // ================================================================
-// Анимация шапки при прокрутке
+// Показ/скрытие шапки при прокрутке
 // ================================================================
 function initScrollHeader() {
     const header = document.querySelector('.header');
     if (!header) return;
     
     let lastScrollY = window.scrollY;
+    let ticking = false;
     
-    window.addEventListener('scroll', () => {
+    function updateHeader() {
         const currentScrollY = window.scrollY;
         
+        // Показываем шапку при прокрутке вниз (после 100px)
         if (currentScrollY > 100) {
-            header.classList.add('scrolled');
+            header.classList.add('visible');
         } else {
-            header.classList.remove('scrolled');
+            header.classList.remove('visible');
         }
         
         lastScrollY = currentScrollY;
+        ticking = false;
+    }
+    
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            requestAnimationFrame(updateHeader);
+            ticking = true;
+        }
     });
 }
 

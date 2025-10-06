@@ -148,14 +148,22 @@ input, textarea {
    ================================================================= */
 .header {
     position: fixed;
-    top: 0;
+    top: -100px;
     left: 0;
     right: 0;
-    background:#e0e0e0;
+    background: rgba(205, 210, 217, 0.95);
     backdrop-filter: blur(10px);
     z-index: 1000;
     padding: 15px 0;
-    transition: var(--transition);
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(-100%);
+}
+
+.header.visible {
+    top: 0;
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .header__content {
@@ -956,15 +964,15 @@ input, textarea {
     /* Мобильное меню */
     .header__nav {
         position: fixed;
-        top: 70px;
+        top: 0;
         left: -100%;
         width: 100%;
-        height: calc(100vh - 70px);
+        height: 100vh;
         background: rgba(255, 255, 255, 0.98);
         backdrop-filter: blur(10px);
         transition: left 0.3s ease;
         z-index: 999;
-        padding-top: 2rem;
+        padding-top: 100px;
         display: flex;
     }
     
@@ -1007,11 +1015,6 @@ input, textarea {
         transform: rotate(-45deg) translate(7px, -6px);
     }
     
-    /* Стиль шапки при скролле */
-    .header.scrolled {
-        background: rgba(255, 255, 255, 0.98);
-        box-shadow: 0 2px 20px rgba(20, 93, 87, 0.1);
-    }
     
     /* Остальные стили */
     .hero__bg {
