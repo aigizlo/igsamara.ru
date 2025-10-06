@@ -14,9 +14,10 @@
     /* Дополнительные цвета */
     --color-white: #ffffff;
     --color-black: #000000;
-    --color-gray-light: #f8f9fa;
+    --color-gray-light: e0e0e0;
     --color-gray: #6c757d;
     --color-gray-dark: #343a40;
+    --color-site-bg: #e0e0e0;
     
     /* Шрифты */
     --font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
@@ -61,7 +62,7 @@ body {
     font-weight: var(--font-weight-normal);
     line-height: 1.6;
     color: var(--color-gray-dark);
-    background-color: var(--color-white);
+    background-color: var(--color-site-bg);
     overflow-x: hidden;
 }
 
@@ -133,7 +134,7 @@ input, textarea {
 }
 
 .btn--secondary:hover {
-    background: var(--color-white);
+    background: var(--color-gray-light);
     color: var(--color-primary);
     transform: translateY(-2px);
 }
@@ -150,7 +151,7 @@ input, textarea {
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(255, 255, 255, 0.95);
+    background:#e0e0e0;
     backdrop-filter: blur(10px);
     z-index: 1000;
     padding: 15px 0;
@@ -296,7 +297,7 @@ input, textarea {
    ================================================================= */
 .about {
     padding: var(--section-padding) 0;
-    background: var(--color-gray-light);
+    background: #e0e0e0;
 }
 
 .about__content {
@@ -462,7 +463,7 @@ input, textarea {
 
 .cases__grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
 }
 
@@ -519,7 +520,7 @@ input, textarea {
 }
 
 .case__metric {
-    background: var(--color-gray-light);
+    background: var(--color-white);
     padding: 6px 12px;
     border-radius: 20px;
     font-size: 14px;
@@ -532,7 +533,7 @@ input, textarea {
    ================================================================= */
 .process {
     padding: var(--section-padding) 0;
-    background: var(--color-gray-light);
+    background: #e0e0e0;
 }
 
 .process__title {
@@ -591,6 +592,88 @@ input, textarea {
     font-style: italic;
     max-width: 600px;
     margin: 0 auto;
+}
+
+/* =================================================================
+   Ремонт и подготовка помещений
+   ================================================================= */
+.renovation {
+    padding: var(--section-padding) 0;
+    background: var(--color-gray-light);
+}
+
+.renovation__content {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.renovation__title {
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-primary);
+    margin-bottom: 24px;
+}
+
+.renovation__subtitle {
+    font-size: clamp(16px, 2vw, 20px);
+    color: var(--color-gray);
+    margin-bottom: 60px;
+    line-height: 1.6;
+}
+
+.renovation__benefits {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.renovation__benefit {
+    background: var(--color-white);
+    border-radius: 16px;
+    padding: 30px 20px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.renovation__benefit:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+}
+
+.renovation__benefit-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-white);
+}
+
+.renovation__benefit-text {
+    color: var(--color-gray-dark);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+}
+
+.renovation__cta {
+    display: flex;
+    justify-content: center;
+}
+
+.renovation__cta .btn--secondary {
+    margin-left: 20px;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+    color: var(--color-white);
+    border-color: transparent;
 }
 
 /* =================================================================
@@ -701,7 +784,7 @@ input, textarea {
     font-weight: var(--font-weight-semibold);
     color: var(--color-primary);
     cursor: pointer;
-    background: var(--color-gray-light);
+    background: var(--color-white);
     transition: var(--transition);
     position: relative;
 }
@@ -815,7 +898,13 @@ input, textarea {
     }
     
     .cases__grid {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+    
+    .renovation__benefits {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
     }
     
     .process__steps {
@@ -916,6 +1005,21 @@ input, textarea {
     .cases__grid {
         grid-template-columns: 1fr;
         gap: 24px;
+    }
+    
+    .renovation__benefits {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    
+    .renovation__cta {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .renovation__cta .btn--secondary {
+        margin-left: 0;
+        margin-top: 16px;
     }
     
     .process__steps {
