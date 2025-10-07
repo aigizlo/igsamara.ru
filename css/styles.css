@@ -181,8 +181,8 @@ input, textarea {
 .header__brand {
     flex: 1;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    padding-left: 30px;
 }
 
 .header__brand-text {
@@ -1335,7 +1335,7 @@ input, textarea {
     }
     
     .renovation__cta .btn--secondary {
-        margin-left: 0;
+        margin-left: -25px;
         margin-top: 0;
     }
     

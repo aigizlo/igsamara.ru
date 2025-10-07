@@ -135,9 +135,10 @@ function initContactForm() {
         
         // Получаем данные формы
         const formData = new FormData(this);
-        const name = this.querySelector('input[type="text"]').value.trim();
-        const phone = this.querySelector('input[type="tel"]').value.trim();
-        const message = this.querySelector('textarea').value.trim();
+        const name = this.querySelector('input[name="name"]').value.trim();
+        const phone = this.querySelector('input[name="phone"]').value.trim();
+        const email = this.querySelector('input[name="email"]').value.trim();
+        const message = this.querySelector('textarea[name="message"]').value.trim();
         
         // Валидация полей
         if (!validateForm(name, phone)) {
@@ -148,6 +149,7 @@ function initContactForm() {
         submitForm({
             name: name,
             phone: phone,
+            email: email,
             message: message
         });
     });
@@ -223,24 +225,16 @@ function submitForm(data) {
     submitButton.textContent = 'Отправляем...';
     submitButton.disabled = true;
     
-    // Имитация отправки (можно заменить на реальную интеграцию)
-    setTimeout(() => {
-        showSuccessMessage();
-        resetForm();
-        
-        // Возвращаем кнопку в исходное состояние
-        submitButton.textContent = originalText;
-        submitButton.disabled = false;
-    }, 1500);
+    // Отправка данных на PHP скрипт для Telegram бота
+    const formData = new FormData();
+    formData.append('name', data.name);
+    formData.append('phone', data.phone);
+    formData.append('email', data.email);
+    formData.append('message', data.message);
     
-    // Пример реальной отправки через fetch:
-    /*
-    fetch('/submit-form', {
+    fetch('simple_telegram.php', {
         method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data)
+        body: formData
     })
     .then(response => response.json())
     .then(result => {
@@ -252,13 +246,13 @@ function submitForm(data) {
         }
     })
     .catch(error => {
+        console.error('Ошибка отправки:', error);
         showErrorMessage('Произошла ошибка при отправке. Попробуйте еще раз.');
     })
     .finally(() => {
         submitButton.textContent = originalText;
         submitButton.disabled = false;
     });
-    */
 }
 
 // ================================================================
@@ -279,6 +273,27 @@ function showSuccessMessage() {
     // Удаляем сообщение через 5 секунд
     setTimeout(() => {
         successMessage.remove();
+    }, 5000);
+}
+
+// ================================================================
+// Показ сообщения об ошибке
+// ================================================================
+function showErrorMessage(message) {
+    const form = document.getElementById('contactForm');
+    const errorMessage = document.createElement('div');
+    errorMessage.className = 'form__error-message';
+    errorMessage.innerHTML = `
+        <p style="color: #dc3545; background: rgba(220, 53, 69, 0.1); padding: 16px; border-radius: 8px; margin-top: 20px; text-align: center;">
+            ✗ ${message}
+        </p>
+    `;
+    
+    form.appendChild(errorMessage);
+    
+    // Удаляем сообщение через 5 секунд
+    setTimeout(() => {
+        errorMessage.remove();
     }, 5000);
 }
 

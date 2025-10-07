@@ -444,13 +444,16 @@
                     <p class="cta__subtitle">Мы подберем варианты за 24 часа</p>
                     <form class="cta__form" id="contactForm">
                         <div class="form__group">
-                            <input type="text" class="form__input" placeholder="Ваше имя" required>
+                            <input type="text" name="name" class="form__input" placeholder="Ваше имя" required>
                         </div>
                         <div class="form__group">
-                            <input type="tel" class="form__input" placeholder="Телефон" required>
+                            <input type="tel" name="phone" class="form__input" placeholder="Телефон" required>
                         </div>
                         <div class="form__group">
-                            <textarea class="form__input form__input--textarea" placeholder="Опишите ваши потребности" rows="4"></textarea>
+                            <input type="email" name="email" class="form__input" placeholder="Email (необязательно)">
+                        </div>
+                        <div class="form__group">
+                            <textarea name="message" class="form__input form__input--textarea" placeholder="Опишите ваши потребности" rows="4"></textarea>
                         </div>
                         <button type="submit" class="btn btn--primary btn--full">Отправить</button>
                         <p class="form__privacy">Нажимая кнопку, вы соглашаетесь с <a href="#" class="form__privacy-link">политикой конфиденциальности</a></p>
@@ -493,7 +496,6 @@
             <div class="footer__content">
                 <div class="footer__info">
                     <div class="footer__contacts">
-                        <a href="tel:+79379999136" class="footer__contact">8(937)999-91-36</a>
                         <a href="tel:+79379999801" class="footer__contact">8(937)999-98-01</a>
                         <a href="tel:+79379999321" class="footer__contact">8(937)999-93-21</a>
                         <a href="tel:+79379999136" class="footer__contact">8(937)999-91-36</a>

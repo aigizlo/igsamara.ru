@@ -1,0 +1,22 @@
+{
+  "name": "investgroup-telegram-form",
+  "version": "1.0.0",
+  "description": "Telegram bot for form submissions from InvestGroup website",
+  "main": "telegram-bot.js",
+  "scripts": {
+    "start": "node telegram-bot.js",
+    "dev": "nodemon telegram-bot.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "axios": "^1.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "keywords": ["telegram", "bot", "form", "investgroup"],
+  "author": "InvestGroup Samara",
+  "license": "ISC"
+}
