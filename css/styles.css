@@ -178,6 +178,21 @@ input, textarea {
     width: auto;
 }
 
+.header__brand {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__brand-text {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
 .header__nav {
     display: flex;
 }
@@ -927,10 +942,22 @@ input, textarea {
 .renovation__cta {
     display: flex;
     justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.renovation__cta .btn {
+    min-width: 200px;
+    flex-shrink: 0;
+}
+
+.renovation__cta .btn--primary {
+    transform: translateX(-12px);
 }
 
 .renovation__cta .btn--secondary {
-    margin-left: 20px;
+    margin-left: 0;
     background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
     color: var(--color-white);
     border-color: transparent;
@@ -1103,7 +1130,7 @@ input, textarea {
 }
 
 .footer__contact {
-    font-size: 18px;
+    font-size: 15px;
     font-weight: var(--font-weight-medium);
     transition: var(--transition);
 }
@@ -1234,6 +1261,10 @@ input, textarea {
         height: 50px;
     }
     
+    .header__brand {
+        display: none; /* Скрываем на мобильных устройствах */
+    }
+    
     .header__burger {
         display: flex;
         z-index: 1001;
@@ -1293,11 +1324,19 @@ input, textarea {
     .renovation__cta {
         flex-direction: column;
         align-items: center;
+        gap: 16px;
+    }
+    
+    .renovation__cta .btn {
+        width: 100%;
+        max-width: 280px;
+        min-width: 280px;
+        text-align: center;
     }
     
     .renovation__cta .btn--secondary {
         margin-left: 0;
-        margin-top: 16px;
+        margin-top: 0;
     }
     
     .process__steps {
@@ -1365,6 +1404,11 @@ input, textarea {
     }
     
     .hero__actions .btn {
+        max-width: 240px;
+        min-width: 240px;
+    }
+    
+    .renovation__cta .btn {
         max-width: 240px;
         min-width: 240px;
     }
