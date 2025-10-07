@@ -182,7 +182,7 @@ input, textarea {
     flex: 1;
     display: flex;
     justify-content: flex-start;
-    padding-left: 30px;
+    padding-left: clamp(10px, 3vw, 30px);
 }
 
 .header__brand-text {
@@ -191,7 +191,8 @@ input, textarea {
     color: var(--color-primary);
     letter-spacing: 2px;
     text-transform: uppercase;
-    margin-inline-start: 30px;
+    margin-inline-start: clamp(10px, 3vw, 30px);
+    white-space: nowrap;
 }
 
 .header__nav {
@@ -208,6 +209,7 @@ input, textarea {
     font-weight: var(--font-weight-medium);
     padding: 8px 0;
     position: relative;
+    white-space: nowrap;
 }
 
 .nav__link::after {
@@ -1165,6 +1167,17 @@ input, textarea {
 /* =================================================================
    Адаптивность
    ================================================================= */
+@media (max-width: 900px) {
+    /* Средние экраны - только INVEST GROUP уменьшается */
+    .header__brand-text {
+        letter-spacing: clamp(0.5px, 0.2vw, 2px);
+    }
+    
+    .nav__list {
+        gap: 20px;
+    }
+}
+
 @media (max-width: 992px) {
     .hero__actions {
         flex-direction: column;
@@ -1259,12 +1272,9 @@ input, textarea {
     }
     
     .header__logo-img {
-        height: 50px;
+        height: 60px;
     }
     
-    .header__brand {
-        display: none; /* Скрываем на мобильных устройствах */
-    }
     
     .header__burger {
         display: flex;
